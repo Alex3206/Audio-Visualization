@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Assuming you have some audio data as a numpy array
+# Here, we'll create a dummy audio signal
+np.random.seed(0)
+audio_data = np.random.randn(44100 * 20)  # 20 seconds of random noise
+
+# Create a time axis
+time = np.linspace(0, 20, len(audio_data))
+
+# Plot the audio signal
+plt.figure(figsize=(12, 6))
+plt.plot(time, audio_data, color='b')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.title('Audio Visualization (Redbone - Childish Gambino)')
+plt.grid(True)
+plt.show()
